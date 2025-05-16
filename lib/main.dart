@@ -1,21 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:nexia/screens/home.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  await Supabase.initialize(
+    url: 'https://xyzcompany.supabase.co',
+    anonKey: 'public-anon-key',
+  );
+
+  runApp(const Nexia());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// Get a reference your Supabase client
+final supabase = Supabase.instance.client;
+
+class Nexia extends StatelessWidget {
+  const Nexia({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Nexia Finance App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
     );
   }
