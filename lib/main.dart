@@ -3,6 +3,7 @@ import 'package:nexia/screens/home.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
+  // TODO: Add your Supabase URL and anon key, and add .env file
   await Supabase.initialize(
     url: 'https://xyzcompany.supabase.co',
     anonKey: 'public-anon-key',
