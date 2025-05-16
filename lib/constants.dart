@@ -22,7 +22,7 @@ const kBackgroundColor = Color(0xFFF7F7F9);
 
 const kLightGrey = Color(0xFF616161);
 
-const kSamlaBlue = Color(0xFF0D6EFD);
+const kNexiaPurple = Color.fromARGB(255, 239, 14, 251);
 
 /* STYLES */
 
